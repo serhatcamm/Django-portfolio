@@ -13,10 +13,10 @@ LIVE DEMO: https://serhatcamm.github.io/Python-Django-Personal-Website-with-Admi
 ## Setup Instructions
 
 1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/serhatcamm/Django-portfolio
-   cd Django-portfolio
-   ```
+```bash
+git clone https://github.com/serhatcamm/Django-portfolio
+cd Django-portfolio
+```
 
 2. **Create and activate a virtual environment:**
    - **Windows:**

@@ -5,7 +5,7 @@ import django
 from pathlib import Path
 
 # Setup Django environment
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'portfolio.settings')
 django.setup()
 
 from projects.models import ThemeSettings

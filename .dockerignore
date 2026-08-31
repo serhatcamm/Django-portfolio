@@ -1,0 +1,29 @@
+# Version control / env
+.git
+.gitignore
+.env
+
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Local dev artifacts
+server.log
+server.log.err
+db.sqlite3
+
+# Docs / static export & screenshots
+docs/
+assets/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore

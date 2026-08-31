@@ -1,0 +1,26 @@
+services:
+  web:
+    build: .
+    container_name: portfolio-web
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      # DEBUG is off by default for the production-facing container. The app
+      # refuses to start without a real, non-default secret (see settings.py).
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?Set a real DJANGO_SECRET_KEY in .env (see .env.example)}
+      DJANGO_DEBUG: ${DJANGO_DEBUG:-False}
+      DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS:-127.0.0.1,localhost,0.0.0.0}
+      DJANGO_DB_PATH: /app/data/db.sqlite3
+      ENVIRONMENT: ${ENVIRONMENT:-development}
+      # Credentials for the auto-created admin superuser
+      DJANGO_SUPERUSER_USERNAME: ${DJANGO_SUPERUSER_USERNAME:-admin}
+      DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-admin123}
+      DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@example.com}
+    volumes:
+      - sqlite_data:/app/data
+    # Keep the sqlite database inside the named volume so data persists
+    command: sh -c "mkdir -p /app/data && exec gunicorn --bind 0.0.0.0:8000 --workers 3 portfolio.wsgi:application"
+
+volumes:
+  sqlite_data:
