@@ -14,7 +14,7 @@ LIVE DEMO: https://serhatcamm.github.io/Python-Django-Personal-Website-with-Admi
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/serhatcamm/Python-Django-Personal-Website-with-Admin-Panel.git
+   git clone https://github.com/serhatcamm/Django-portfolio
    cd Python-Django-Personal-Website-with-Admin-Panel
    ```
 
