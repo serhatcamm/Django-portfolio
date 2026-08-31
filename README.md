@@ -6,6 +6,16 @@ Fully containerized with **Docker** so you can run it (demo content included) in
 
 **🔗 Live demo:** https://serhatcamm.github.io/Django-portfolio/
 
+## 📸 Screenshots (all themes)
+
+<p align="center">
+  <img src="assets/screenshots/themes/modern-dark.png" width="49%" alt="Modern Dark theme" />
+  <img src="assets/screenshots/themes/midnight-deep.png" width="49%" alt="Midnight Deep theme" />
+  <br/>
+  <img src="assets/screenshots/themes/emerald-forest.png" width="49%" alt="Emerald Forest theme" />
+  <img src="assets/screenshots/themes/soft-rose.png" width="49%" alt="Soft Rose theme" />
+</p>
+
 ## ✨ Features
 
 - **Dynamic Theme Management** — switch between built-in color schemes (Modern Dark, Midnight Deep, Emerald Forest, Soft Rose) or create your own from the admin.
@@ -181,7 +191,7 @@ The `docs/` folder is the static export served by GitHub Pages at:
 
 ---
 
-## 📸 Screenshots
+## 📸 More screenshots
 
 ### Home
 
