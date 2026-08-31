@@ -137,13 +137,26 @@
                     </button>
                     <div class="theme-dropdown-content">
                         <div class="theme-dropdown-header">Site Themes</div>
-                        {% for t in all_themes %}
-                            <a href="{% url 'activate_theme' t.id %}" class="theme-option {% if theme.id == t.id %}active{% endif %}">
-                                <span class="theme-color-preview" style="background: {{ t.bg_color }}; border: 1px solid {{ t.accent_color }};"></span>
-                                {{ t.name }}
-                                {% if theme.id == t.id %}<i class="fas fa-check"></i>{% endif %}
-                            </a>
-                        {% endfor %}
+                        {% if user.is_authenticated and user.is_staff %}
+                            {% for t in all_themes %}
+                                <form method="post" action="{% url 'activate_theme' t.id %}" class="theme-option-form">
+                                    {% csrf_token %}
+                                    <button type="submit" class="theme-option {% if theme.id == t.id %}active{% endif %}" title="Activate theme">
+                                        <span class="theme-color-preview" style="background: {{ t.bg_color }}; border: 1px solid {{ t.accent_color }};"></span>
+                                        {{ t.name }}
+                                        {% if theme.id == t.id %}<i class="fas fa-check"></i>{% endif %}
+                                    </button>
+                                </form>
+                            {% endfor %}
+                        {% else %}
+                            {% for t in all_themes %}
+                                <div class="theme-option {% if theme.id == t.id %}active{% endif %}" title="Theme">
+                                    <span class="theme-color-preview" style="background: {{ t.bg_color }}; border: 1px solid {{ t.accent_color }};"></span>
+                                    {{ t.name }}
+                                    {% if theme.id == t.id %}<i class="fas fa-check"></i>{% endif %}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
 

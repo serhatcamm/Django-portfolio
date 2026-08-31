@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.utils.http import url_has_allowed_host_and_scheme
+from django.views.decorators.http import require_POST
+from django.contrib.admin.views.decorators import staff_member_required
 from .models import Project, ThemeSettings
 from django.db.models import Q
 from pages.views import get_base_context
@@ -40,9 +43,16 @@ def search_view(request):
     })
     return render(request, 'projects/search_results.html', context)
 
+@staff_member_required
+@require_POST
 def activate_theme(request, theme_id):
     ThemeSettings.objects.all().update(is_active=False)
     theme = get_object_or_404(ThemeSettings, id=theme_id)
     theme.is_active = True
     theme.save()
-    return redirect(request.META.get('HTTP_REFERER', 'home'))
+
+    referer = request.POST.get('next') or request.META.get('HTTP_REFERER', '')
+    host = request.get_host()
+    if referer and url_has_allowed_host_and_scheme(referer, allowed_hosts={host}, require_https=False):
+        return redirect(referer)
+    return redirect('home')
