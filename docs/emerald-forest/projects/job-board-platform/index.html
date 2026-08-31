@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+        <link rel="icon" type="image/x-icon" href="/Django-portfolio/emerald-forest/static/assets/favicon.svg">
+    
+    <link rel="stylesheet" href="/Django-portfolio/emerald-forest/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        // Prevent layout flicker by initializing in <head>
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+
+    <style>
+        :root {
+            /* Fallback Defaults */
+            --bg-color: #0c0c0e;
+            --bg-color-rgb: 12, 12, 14;
+            --accent: #a78bfa;
+            --accent-rgb: 167, 139, 250;
+            --card-bg: #161619;
+            --text-primary: #f4f4f5;
+            --text-secondary: #a1a1aa;
+            --bg-pattern-color: #ffffff;
+            --anim-speed: 0.6s;
+            --navbar-bg: rgba(var(--bg-color-rgb), 0.9);
+
+            
+            --bg-color: #061a11;
+            --bg-color-rgb: 6, 26, 17;
+            --accent: #10b981;
+            --accent-rgb: 16, 185, 129;
+            --card-bg: #0a2619;
+            --text-primary: #ecfdf5;
+            --text-secondary: #a7f3d0;
+            --bg-pattern-color: #10b981;
+            --bg-pattern-opacity: 0.11;
+            --anim-speed: 0.8s;
+            
+            
+            --container-width: 1640px;
+            --grid-min-width: 380px;
+            --card-radius: 24px;
+            --glass-blur: 15px;
+            --nav-padding-y: 0.8rem;
+            --section-padding-y: 0.0rem;
+            --hero-gap: 0.0rem;
+            --container-padding-top: 0.0rem;
+            
+        }
+        
+        /* Apply theme immediately to body */
+        body[data-theme='light'] { 
+            
+            --bg-color: #fafafa; 
+            --bg-color-rgb: 250, 250, 250;
+            --card-bg: #ffffff; 
+            --text-primary: #111827; 
+            --text-secondary: #4b5563; 
+            --accent: #8b5cf6; 
+            --accent-rgb: 139, 92, 246;
+            --bg-pattern-color: #e5e7eb;
+            
+            --navbar-bg: rgba(var(--bg-color-rgb), 0.9); 
+        }
+        
+        .lang-en, .lang-tr { display: none; }
+        body.lang-en .lang-en { display: inline !important; }
+        body.lang-tr .lang-tr { display: inline !important; }
+        
+        
+    </style>
+</head>
+<body data-theme="dark">
+    <script>document.body.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');</script>
+    <div class="bg-fixed-img"></div>
+    <div class="bg-overlay"></div>
+    <div class="bg-pattern-layer bg-dots"></div>
+    
+    <nav>
+        <div class="logo">
+            <a href="/Django-portfolio/index.html" class="logo-text">
+                <span class="logo-accent">PORT</span>FOLIO
+            </a>
+        </div>
+        <div class="nav-content">
+            <div class="nav-links">
+                <a href="/Django-portfolio/index.html">Home</a>
+                <a href="/Django-portfolio/emerald-forest/projects/index.html">Projects</a>
+                <a href="/Django-portfolio/emerald-forest/about/index.html">About</a>
+                <a href="/Django-portfolio/emerald-forest/references/index.html">References</a>
+                <a href="/Django-portfolio/emerald-forest/admin-preview/index.html">Admin</a>
+                <a href="/Django-portfolio/emerald-forest/contact/index.html">Contact</a>
+            </div>
+            
+            <div class="search-nav-wrapper">
+                <button type="button" class="nav-btn" onclick="toggleTheme()" id="theme-toggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <!-- Theme Selector Dropdown -->
+                <div class="theme-dropdown">
+                    <button type="button" class="nav-btn" title="Select Site Theme">
+                        <i class="fas fa-palette"></i>
+                    </button>
+                    <div class="theme-dropdown-content">
+                        <div class="theme-dropdown-header">Site Themes</div>
+                        
+                            <a href="/projects/activate-theme/1/" class="theme-option ">
+                                <span class="theme-color-preview" style="background: #0c0c0e; border: 1px solid #a78bfa;"></span>
+                                Modern Dark
+                                
+                            </a>
+                        
+                            <a href="/projects/activate-theme/2/" class="theme-option ">
+                                <span class="theme-color-preview" style="background: #020617; border: 1px solid #38bdf8;"></span>
+                                Midnight Deep
+                                
+                            </a>
+                        
+                            <a href="/projects/activate-theme/3/" class="theme-option active">
+                                <span class="theme-color-preview" style="background: #061a11; border: 1px solid #10b981;"></span>
+                                Emerald Forest
+                                <i class="fas fa-check"></i>
+                            </a>
+                        
+                            <a href="/projects/activate-theme/4/" class="theme-option ">
+                                <span class="theme-color-preview" style="background: #1a1215; border: 1px solid #fb7185;"></span>
+                                Soft Rose
+                                
+                            </a>
+                        
+                    </div>
+                </div>
+
+                <button type="button" class="nav-btn" onclick="openSearch()" title="Open Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <!-- Search Overlay -->
+            <div id="search-overlay" class="search-overlay">
+                <button class="close-search" onclick="closeSearch()">&times;</button>
+                <div class="search-overlay-content">
+                    <form action="/projects/search/" method="get">
+                        <input type="text" name="q" placeholder="Type to search projects..." id="search-overlay-input" autocomplete="off">
+                        <p class="search-hint">Press Enter to search or ESC to close</p>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                function toggleTheme() {
+                    const body = document.body;
+                    const isLight = body.getAttribute('data-theme') === 'light';
+                    body.setAttribute('data-theme', isLight ? 'dark' : 'light');
+                    localStorage.setItem('theme', isLight ? 'dark' : 'light');
+                    document.getElementById('theme-toggle').innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+                }
+                
+                // Initialize Theme
+                const currentTheme = localStorage.getItem('theme') || 'dark';
+                document.body.setAttribute('data-theme', currentTheme);
+                document.getElementById('theme-toggle').innerHTML = currentTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+                
+                function openSearch() {
+                    document.getElementById('search-overlay').classList.add('active');
+                    setTimeout(() => document.getElementById('search-overlay-input').focus(), 100);
+                }
+
+                function closeSearch() {
+                    document.getElementById('search-overlay').classList.remove('active');
+                }
+
+                // Close on ESC
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') closeSearch();
+                });
+            </script>
+
+            <div class="social-nav">
+                
+                    <a href="https://github.com/serhatcamm" target="_blank" title="GitHub">
+                        
+                            <i class="fa-brands fa-github"></i>
+                        
+                    </a>
+                
+                    <a href="https://www.linkedin.com/in/serhatcammm/" target="_blank" title="LinkedIn">
+                        
+                            <i class="fa-brands fa-linkedin"></i>
+                        
+                    </a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+<section style="max-width: 900px; margin: 0 auto;">
+    <div class="glass-card">
+        <h1 style="margin-top: 0; color: #fff; font-size: 3rem; letter-spacing: -1px;">Job Board Platform</h1>
+        <p style="color: var(--accent); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">Django, PostgreSQL, Elasticsearch</p>
+        
+        
+        <div style="margin: 2rem 0; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+            <img src="/Django-portfolio/emerald-forest/media/project_images/p7.webp" alt="Job Board Platform" style="width: 100%; display: block;">
+        </div>
+        
+
+        <div style="color: var(--text-primary); line-height: 1.8; font-size: 1.1rem; margin-bottom: 2rem;">
+            <p>Full-featured job board with recruiter and candidate portals, smart search, filters and email alerts.</p>
+        </div>
+
+        <div style="display: flex; gap: 1.5rem; align-items: center; justify-content: center; margin-top: 1rem;">
+            
+            <a href="https://example.com/job-board" class="btn-primary" target="_blank">
+                Launch Project
+                <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+            </a>
+            
+            <a href="/Django-portfolio/emerald-forest/projects/index.html" class="btn-outline" style="padding: 1rem 2rem;">
+                <i class="fas fa-chevron-left" style="font-size: 0.8rem; margin-right: 8px;"></i>
+                Back to Projects
+            </a>
+        </div>
+    </div>
+</section>
+
+    </div>
+
+    <footer class="watermark-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <b>SERHAT ÇAM</b>. Crafted with Django &amp; Passion.</p>
+        </div>
+    </footer>
+</body>
+</html>

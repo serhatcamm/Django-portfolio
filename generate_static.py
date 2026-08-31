@@ -21,11 +21,11 @@ PATHS = [
     "admin-preview/",
 ]
 
-PROJECT_SLUGS = ['e-commerce-api', 'ai-image-generator', 'task-management-system', 'portfolio-template', 'finance-tracker', 'blog-platform']
+PROJECT_SLUGS = ['e-commerce-api', 'ai-image-generator', 'task-management-system', 'portfolio-template', 'finance-tracker', 'blog-platform', 'job-board-platform', 'real-time-chat-app']
 for slug in PROJECT_SLUGS:
     PATHS.append(f"projects/{slug}/")
 
-BASE_PATH = "/Python-Django-Personal-Website-with-Admin-Panel"
+BASE_PATH = "/Django-portfolio"
 
 def fix_links(html, full_path, theme_dir):
     # theme_dir e.g. "modern-dark"

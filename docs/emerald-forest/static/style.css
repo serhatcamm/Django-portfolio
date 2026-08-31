@@ -21,6 +21,8 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     color: var(--text-primary);
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -29,7 +31,19 @@ body {
     text-align: center;
 }
 
-.container { max-width: var(--container-width, 1600px); margin: 0 auto; padding: var(--container-padding-top, 2rem) 1rem; text-align: center; position: relative; z-index: 1; }
+.container { max-width: var(--container-width, 1600px); margin: 0 auto; padding: var(--container-padding-top, 2rem) 1rem; text-align: center; position: relative; z-index: 1; flex: 1 0 auto; width: 100%; }
+
+/* Sticky footer: always pinned to the bottom of the viewport */
+.watermark-footer {
+    flex-shrink: 0;
+    padding: 1.4rem 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background: transparent;
+}
+.watermark-footer .footer-content { max-width: var(--container-width, 1600px); margin: 0 auto; }
 
 /* Background Patterns */
 .bg-fixed-img {
@@ -254,11 +268,11 @@ nav {
 .section-title span { color: var(--accent); }
 
 .grid, .testimonial-grid {
+    --grid-min-width: var(--grid-min-width, 320px);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-width, 500px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-width, 320px), 1fr));
     gap: 2rem;
-    justify-content: center;
-    justify-items: center;
+    align-items: stretch;
 }
 
 .glass-card {

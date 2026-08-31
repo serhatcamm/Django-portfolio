@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     
-        <link rel="icon" type="image/x-icon" href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/static/assets/favicon.svg">
+        <link rel="icon" type="image/x-icon" href="/Django-portfolio/emerald-forest/static/assets/favicon.svg">
     
-    <link rel="stylesheet" href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/static/style.css">
+    <link rel="stylesheet" href="/Django-portfolio/emerald-forest/static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <script>
@@ -38,14 +38,14 @@
             --accent-rgb: 16, 185, 129;
             --card-bg: #0a2619;
             --text-primary: #ecfdf5;
-            --text-secondary: #6ee7b7;
+            --text-secondary: #a7f3d0;
             --bg-pattern-color: #10b981;
-            --bg-pattern-opacity: 0.08;
-            --anim-speed: 0.6s;
+            --bg-pattern-opacity: 0.11;
+            --anim-speed: 0.8s;
             
             
             --container-width: 1640px;
-            --grid-min-width: 710px;
+            --grid-min-width: 380px;
             --card-radius: 24px;
             --glass-blur: 15px;
             --nav-padding-y: 0.8rem;
@@ -58,14 +58,14 @@
         /* Apply theme immediately to body */
         body[data-theme='light'] { 
             
-            --bg-color: #f0fdf4; 
-            --bg-color-rgb: 240, 253, 244;
+            --bg-color: #fafafa; 
+            --bg-color-rgb: 250, 250, 250;
             --card-bg: #ffffff; 
-            --text-primary: #064e3b; 
-            --text-secondary: #065f46; 
-            --accent: #059669; 
-            --accent-rgb: 5, 150, 105;
-            --bg-pattern-color: #10b981;
+            --text-primary: #111827; 
+            --text-secondary: #4b5563; 
+            --accent: #8b5cf6; 
+            --accent-rgb: 139, 92, 246;
+            --bg-pattern-color: #e5e7eb;
             
             --navbar-bg: rgba(var(--bg-color-rgb), 0.9); 
         }
@@ -85,18 +85,18 @@
     
     <nav>
         <div class="logo">
-            <a href="/Python-Django-Personal-Website-with-Admin-Panel/index.html" class="logo-text">
+            <a href="/Django-portfolio/index.html" class="logo-text">
                 <span class="logo-accent">PORT</span>FOLIO
             </a>
         </div>
         <div class="nav-content">
             <div class="nav-links">
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/index.html">Home</a>
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/projects/index.html">Projects</a>
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/about/index.html">About</a>
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/references/index.html">References</a>
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/admin-preview/index.html">Admin</a>
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/contact/index.html">Contact</a>
+                <a href="/Django-portfolio/index.html">Home</a>
+                <a href="/Django-portfolio/emerald-forest/projects/index.html">Projects</a>
+                <a href="/Django-portfolio/emerald-forest/about/index.html">About</a>
+                <a href="/Django-portfolio/emerald-forest/references/index.html">References</a>
+                <a href="/Django-portfolio/emerald-forest/admin-preview/index.html">Admin</a>
+                <a href="/Django-portfolio/emerald-forest/contact/index.html">Contact</a>
             </div>
             
             <div class="search-nav-wrapper">
@@ -112,25 +112,25 @@
                     <div class="theme-dropdown-content">
                         <div class="theme-dropdown-header">Site Themes</div>
                         
-                            <a href="/projects/activate-theme/3/" class="theme-option ">
+                            <a href="/projects/activate-theme/1/" class="theme-option ">
                                 <span class="theme-color-preview" style="background: #0c0c0e; border: 1px solid #a78bfa;"></span>
                                 Modern Dark
                                 
                             </a>
                         
-                            <a href="/projects/activate-theme/4/" class="theme-option ">
+                            <a href="/projects/activate-theme/2/" class="theme-option ">
                                 <span class="theme-color-preview" style="background: #020617; border: 1px solid #38bdf8;"></span>
                                 Midnight Deep
                                 
                             </a>
                         
-                            <a href="/projects/activate-theme/5/" class="theme-option active">
+                            <a href="/projects/activate-theme/3/" class="theme-option active">
                                 <span class="theme-color-preview" style="background: #061a11; border: 1px solid #10b981;"></span>
                                 Emerald Forest
                                 <i class="fas fa-check"></i>
                             </a>
                         
-                            <a href="/projects/activate-theme/6/" class="theme-option ">
+                            <a href="/projects/activate-theme/4/" class="theme-option ">
                                 <span class="theme-color-preview" style="background: #1a1215; border: 1px solid #fb7185;"></span>
                                 Soft Rose
                                 
@@ -186,6 +186,18 @@
 
             <div class="social-nav">
                 
+                    <a href="https://github.com/serhatcamm" target="_blank" title="GitHub">
+                        
+                            <i class="fa-brands fa-github"></i>
+                        
+                    </a>
+                
+                    <a href="https://www.linkedin.com/in/serhatcammm/" target="_blank" title="LinkedIn">
+                        
+                            <i class="fa-brands fa-linkedin"></i>
+                        
+                    </a>
+                
             </div>
         </div>
     </nav>
@@ -201,9 +213,9 @@
                 
                 <div class="visual-stack-v2" id="v2-stack" tabindex="0" aria-label="Project slider. Use arrow keys or click to navigate.">
                     
-                    <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/projects/e-commerce-api/index.html" class="stack-item-v2" data-index="0" style="text-decoration: none; color: inherit;">
+                    <a href="/Django-portfolio/emerald-forest/projects/e-commerce-api/index.html" class="stack-item-v2" data-index="0" style="text-decoration: none; color: inherit;">
                         
-                            <img src="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/media/project_images/p1_9ZPYufx.webp" alt="E-Commerce API">
+                            <img src="/Django-portfolio/emerald-forest/media/project_images/p1.webp" alt="E-Commerce API">
                         
                         <div class="item-overlay">
                             <h3>E-Commerce API</h3>
@@ -212,9 +224,9 @@
                         <div class="stack-hint">Click to View</div>
                     </a>
                     
-                    <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/projects/ai-image-generator/index.html" class="stack-item-v2" data-index="1" style="text-decoration: none; color: inherit;">
+                    <a href="/Django-portfolio/emerald-forest/projects/ai-image-generator/index.html" class="stack-item-v2" data-index="1" style="text-decoration: none; color: inherit;">
                         
-                            <img src="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/media/project_images/p2_8pgVjwq.webp" alt="AI Image Generator">
+                            <img src="/Django-portfolio/emerald-forest/media/project_images/p2.webp" alt="AI Image Generator">
                         
                         <div class="item-overlay">
                             <h3>AI Image Generator</h3>
@@ -223,9 +235,9 @@
                         <div class="stack-hint">Click to View</div>
                     </a>
                     
-                    <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/projects/task-management-system/index.html" class="stack-item-v2" data-index="2" style="text-decoration: none; color: inherit;">
+                    <a href="/Django-portfolio/emerald-forest/projects/task-management-system/index.html" class="stack-item-v2" data-index="2" style="text-decoration: none; color: inherit;">
                         
-                            <img src="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/media/project_images/p3_e0MD4SL.webp" alt="Task Management System">
+                            <img src="/Django-portfolio/emerald-forest/media/project_images/p3.webp" alt="Task Management System">
                         
                         <div class="item-overlay">
                             <h3>Task Management System</h3>
@@ -234,9 +246,9 @@
                         <div class="stack-hint">Click to View</div>
                     </a>
                     
-                    <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/projects/portfolio-template/index.html" class="stack-item-v2" data-index="3" style="text-decoration: none; color: inherit;">
+                    <a href="/Django-portfolio/emerald-forest/projects/portfolio-template/index.html" class="stack-item-v2" data-index="3" style="text-decoration: none; color: inherit;">
                         
-                            <img src="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/media/project_images/p1_yFTowX0.webp" alt="Portfolio Template">
+                            <img src="/Django-portfolio/emerald-forest/media/project_images/p4.webp" alt="Portfolio Template">
                         
                         <div class="item-overlay">
                             <h3>Portfolio Template</h3>
@@ -245,9 +257,9 @@
                         <div class="stack-hint">Click to View</div>
                     </a>
                     
-                    <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/projects/finance-tracker/index.html" class="stack-item-v2" data-index="4" style="text-decoration: none; color: inherit;">
+                    <a href="/Django-portfolio/emerald-forest/projects/finance-tracker/index.html" class="stack-item-v2" data-index="4" style="text-decoration: none; color: inherit;">
                         
-                            <img src="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/media/project_images/p2_KURp314.webp" alt="Finance Tracker">
+                            <img src="/Django-portfolio/emerald-forest/media/project_images/p5.webp" alt="Finance Tracker">
                         
                         <div class="item-overlay">
                             <h3>Finance Tracker</h3>
@@ -256,13 +268,35 @@
                         <div class="stack-hint">Click to View</div>
                     </a>
                     
-                    <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/projects/blog-platform/index.html" class="stack-item-v2" data-index="5" style="text-decoration: none; color: inherit;">
+                    <a href="/Django-portfolio/emerald-forest/projects/blog-platform/index.html" class="stack-item-v2" data-index="5" style="text-decoration: none; color: inherit;">
                         
-                            <img src="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/media/project_images/p3_9M822HH.webp" alt="Blog Platform">
+                            <img src="/Django-portfolio/emerald-forest/media/project_images/p6.webp" alt="Blog Platform">
                         
                         <div class="item-overlay">
                             <h3>Blog Platform</h3>
                             <p>Django, PostgreSQL</p>
+                        </div>
+                        <div class="stack-hint">Click to View</div>
+                    </a>
+                    
+                    <a href="/Django-portfolio/emerald-forest/projects/job-board-platform/index.html" class="stack-item-v2" data-index="6" style="text-decoration: none; color: inherit;">
+                        
+                            <img src="/Django-portfolio/emerald-forest/media/project_images/p7.webp" alt="Job Board Platform">
+                        
+                        <div class="item-overlay">
+                            <h3>Job Board Platform</h3>
+                            <p>Django, PostgreSQL, Elasticsearch</p>
+                        </div>
+                        <div class="stack-hint">Click to View</div>
+                    </a>
+                    
+                    <a href="/Django-portfolio/emerald-forest/projects/real-time-chat-app/index.html" class="stack-item-v2" data-index="7" style="text-decoration: none; color: inherit;">
+                        
+                            <img src="/Django-portfolio/emerald-forest/media/project_images/p8.webp" alt="Real-Time Chat App">
+                        
+                        <div class="item-overlay">
+                            <h3>Real-Time Chat App</h3>
+                            <p>Django, Channels, Redis</p>
                         </div>
                         <div class="stack-hint">Click to View</div>
                     </a>
@@ -287,11 +321,11 @@
             <p class="hero-bio">Building high-performance, dynamic web applications with Python &amp; Django.</p>
             
             <div class="action-row">
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/projects/index.html" class="btn-primary">
+                <a href="/Django-portfolio/emerald-forest/projects/index.html" class="btn-primary">
                     Explore Work
                     <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/emerald-forest/contact/index.html" class="btn-outline">
+                <a href="/Django-portfolio/emerald-forest/contact/index.html" class="btn-outline">
                     Let&#x27;s Talk
                 </a>
             </div>
@@ -334,6 +368,20 @@
                 </div>
             </div>
             
+            <div class="expertise-card-v2">
+                <div class="card-icon"><i class="fas fa-code"></i></div>
+                <h3>Databases &amp; Tools</h3>
+                <div class="skill-tags">
+                    
+                    <span class="tag-v2">PostgreSQL</span>
+                    
+                    <span class="tag-v2">Redis</span>
+                    
+                    <span class="tag-v2">Docker</span>
+                    
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -342,12 +390,12 @@
         <div class="stats-inner">
             
             <div class="stat-box-v2">
-                <div class="stat-val" data-target="6+">6+</div>
+                <div class="stat-val" data-target="8+">8+</div>
                 <div class="stat-lbl">Projects Completed</div>
             </div>
             
             <div class="stat-box-v2">
-                <div class="stat-val" data-target="10+">10+</div>
+                <div class="stat-val" data-target="6+">6+</div>
                 <div class="stat-lbl">Happy Clients</div>
             </div>
             
@@ -361,16 +409,16 @@
 </div>
 
 <style>
-    .home-v2 { display: flex; flex-direction: column; gap: 8rem; padding: 4rem 0; text-align: left; }
+    .home-v2 { display: flex; flex-direction: column; gap: 3.5rem; padding: 0.5rem 0 3rem; text-align: left; }
     
     /* Hero V2 */
     .hero-v2 { 
         display: grid; 
-        grid-template-columns: 1.4fr 1fr; 
-        gap: 6rem; 
+        grid-template-columns: 1.6fr 1fr; 
+        gap: 5rem; 
         align-items: center; 
-        min-height: 85vh; 
-        padding: 4rem 0;
+        min-height: 62vh; 
+        padding: 1rem 0 2rem;
         text-align: left; 
     }
     .hero-v2-text { display: flex; flex-direction: column; gap: 1.5rem; text-align: left; }
@@ -397,7 +445,7 @@
     }
     
     .typewriter-container { 
-        font-size: 1.6rem; 
+        font-size: 1.7rem; 
         font-weight: 600; 
         min-height: 1.2em;
         opacity: 0.9;
@@ -408,15 +456,15 @@
     .cursor { color: var(--accent); animation: blink 1s step-end infinite; font-weight: 200; }
     
     .hero-bio { 
-        font-size: 1.15rem; 
+        font-size: 1.2rem; 
         color: var(--text-secondary); 
-        max-width: 480px; 
+        max-width: 500px; 
         line-height: 1.7; 
         margin: 1rem 0;
         opacity: 0.8;
     }
     
-    .action-row { display: flex; gap: 1.2rem; margin-top: 2rem; }
+    .action-row { display: flex; gap: 1.2rem; margin-top: 2rem; flex-wrap: wrap; }
     
     /* Visual Stack V2 */
     .hero-v2-visual { 
@@ -430,8 +478,8 @@
 
     .stack-frame {
         position: relative;
-        width: 480px;
-        height: 320px;
+        width: 660px;
+        height: 440px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -444,8 +492,8 @@
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
         color: var(--text-primary);
-        width: 50px;
-        height: 50px;
+        width: 54px;
+        height: 54px;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -455,10 +503,10 @@
         z-index: 30;
     }
     
-    .stack-nav.prev { left: -70px; }
-    .stack-nav.next { right: -70px; }
+    .stack-nav.prev { left: -75px; }
+    .stack-nav.next { right: -75px; }
     
-    .stack-nav i { font-size: 1.1rem; }
+    .stack-nav i { font-size: 1.2rem; }
     
     .stack-nav:hover { background: var(--accent); color: #000; transform: translateY(-50%) scale(1.1); }
     .stack-nav:active { transform: translateY(-50%) scale(0.95); }
@@ -472,22 +520,46 @@
         outline: none;
     }
     
+    .item-overlay h3 { margin: 0; font-size: 1.45rem; }
+    
+    @media (max-width: 1280px) {
+        .stack-frame { width: 580px; height: 390px; }
+    }
+
     @media (max-width: 1024px) {
         .hero-v2 { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
         .hero-v2-text { align-items: center; text-align: center; }
-        .stack-frame { width: 400px; height: 280px; }
+        .main-title { font-size: 4.5rem; letter-spacing: -3px; }
+        .hero-bio { margin-left: auto; margin-right: auto; }
+        .stack-frame { width: 560px; height: 380px; }
         .stack-nav.prev { left: -60px; }
         .stack-nav.next { right: -60px; }
     }
 
-    @media (max-width: 600px) {
-        .stack-frame { width: 100%; max-width: 320px; height: 240px; }
-        .stack-nav { display: none; }
+    @media (max-width: 640px) {
+        .home-v2 { gap: 5rem; padding: 2.5rem 0; }
+        .hero-v2 { gap: 3rem; padding: 2.5rem 0; min-height: auto; }
+        .main-title { font-size: 3rem; letter-spacing: -2px; }
+        .typewriter-container { font-size: 1.25rem; }
+        .hero-bio { font-size: 1.05rem; }
+        .action-row { justify-content: center; gap: 1rem; }
+        .stack-frame { width: 100%; max-width: 420px; height: 300px; }
+        .stack-nav.prev { left: 6px; }
+        .stack-nav.next { right: 6px; }
+        .stack-nav { width: 44px; height: 44px; }
+        .expertise-grid-v2 { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+        .main-title { font-size: 2.5rem; letter-spacing: -1px; }
+        .typewriter-container { font-size: 1.1rem; }
+        .stack-frame { max-width: 340px; height: 250px; }
+        .stack-nav { width: 40px; height: 40px; font-size: 0.9rem; }
+        .title-v2 { font-size: 2.1rem; }
+        .stats-v2 { padding: 3rem 1.5rem; }
+        .stat-val { font-size: 2.6rem; }
     }
     
-    @media (max-width: 480px) {
-        .stack-nav { display: none; } /* Hide arrows on very small screens, use tap */
-    }
     .visual-stack-v2:focus-visible .stack-item-v2 { box-shadow: 0 0 0 3px var(--accent); }
     
     .stack-item-v2 { 
@@ -535,7 +607,6 @@
         padding: 2rem 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
         color: #fff;
     }
-    .item-overlay h3 { margin: 0; font-size: 1.2rem; }
     .item-overlay p { margin: 0.3rem 0 0; font-size: 0.8rem; opacity: 0.7; color: var(--accent); }
     
     /* Expertise V2 */

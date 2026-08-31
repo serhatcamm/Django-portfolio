@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     
-        <link rel="icon" type="image/x-icon" href="/Python-Django-Personal-Website-with-Admin-Panel/midnight-deep/static/assets/favicon.svg">
+        <link rel="icon" type="image/x-icon" href="/Django-portfolio/midnight-deep/static/assets/favicon.svg">
     
-    <link rel="stylesheet" href="/Python-Django-Personal-Website-with-Admin-Panel/midnight-deep/static/style.css">
+    <link rel="stylesheet" href="/Django-portfolio/midnight-deep/static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <script>
@@ -37,15 +37,15 @@
             --accent: #38bdf8;
             --accent-rgb: 56, 189, 248;
             --card-bg: #0f172a;
-            --text-primary: #f8fafc;
+            --text-primary: #f1f5f9;
             --text-secondary: #94a3b8;
             --bg-pattern-color: #38bdf8;
-            --bg-pattern-opacity: 0.1;
-            --anim-speed: 0.6s;
+            --bg-pattern-opacity: 0.11;
+            --anim-speed: 1.0s;
             
             
             --container-width: 1640px;
-            --grid-min-width: 710px;
+            --grid-min-width: 380px;
             --card-radius: 24px;
             --glass-blur: 15px;
             --nav-padding-y: 0.8rem;
@@ -58,14 +58,14 @@
         /* Apply theme immediately to body */
         body[data-theme='light'] { 
             
-            --bg-color: #f0f9ff; 
-            --bg-color-rgb: 240, 249, 255;
+            --bg-color: #fafafa; 
+            --bg-color-rgb: 250, 250, 250;
             --card-bg: #ffffff; 
-            --text-primary: #0c4a6e; 
-            --text-secondary: #075985; 
-            --accent: #0284c7; 
-            --accent-rgb: 2, 132, 199;
-            --bg-pattern-color: #38bdf8;
+            --text-primary: #111827; 
+            --text-secondary: #4b5563; 
+            --accent: #8b5cf6; 
+            --accent-rgb: 139, 92, 246;
+            --bg-pattern-color: #e5e7eb;
             
             --navbar-bg: rgba(var(--bg-color-rgb), 0.9); 
         }
@@ -81,22 +81,22 @@
     <script>document.body.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');</script>
     <div class="bg-fixed-img"></div>
     <div class="bg-overlay"></div>
-    <div class="bg-pattern-layer bg-grid"></div>
+    <div class="bg-pattern-layer bg-dots"></div>
     
     <nav>
         <div class="logo">
-            <a href="/Python-Django-Personal-Website-with-Admin-Panel/index.html" class="logo-text">
+            <a href="/Django-portfolio/index.html" class="logo-text">
                 <span class="logo-accent">PORT</span>FOLIO
             </a>
         </div>
         <div class="nav-content">
             <div class="nav-links">
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/index.html">Home</a>
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/midnight-deep/projects/index.html">Projects</a>
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/midnight-deep/about/index.html">About</a>
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/midnight-deep/references/index.html">References</a>
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/midnight-deep/admin-preview/index.html">Admin</a>
-                <a href="/Python-Django-Personal-Website-with-Admin-Panel/midnight-deep/contact/index.html">Contact</a>
+                <a href="/Django-portfolio/index.html">Home</a>
+                <a href="/Django-portfolio/midnight-deep/projects/index.html">Projects</a>
+                <a href="/Django-portfolio/midnight-deep/about/index.html">About</a>
+                <a href="/Django-portfolio/midnight-deep/references/index.html">References</a>
+                <a href="/Django-portfolio/midnight-deep/admin-preview/index.html">Admin</a>
+                <a href="/Django-portfolio/midnight-deep/contact/index.html">Contact</a>
             </div>
             
             <div class="search-nav-wrapper">
@@ -112,25 +112,25 @@
                     <div class="theme-dropdown-content">
                         <div class="theme-dropdown-header">Site Themes</div>
                         
-                            <a href="/projects/activate-theme/3/" class="theme-option ">
+                            <a href="/projects/activate-theme/1/" class="theme-option ">
                                 <span class="theme-color-preview" style="background: #0c0c0e; border: 1px solid #a78bfa;"></span>
                                 Modern Dark
                                 
                             </a>
                         
-                            <a href="/projects/activate-theme/4/" class="theme-option active">
+                            <a href="/projects/activate-theme/2/" class="theme-option active">
                                 <span class="theme-color-preview" style="background: #020617; border: 1px solid #38bdf8;"></span>
                                 Midnight Deep
                                 <i class="fas fa-check"></i>
                             </a>
                         
-                            <a href="/projects/activate-theme/5/" class="theme-option ">
+                            <a href="/projects/activate-theme/3/" class="theme-option ">
                                 <span class="theme-color-preview" style="background: #061a11; border: 1px solid #10b981;"></span>
                                 Emerald Forest
                                 
                             </a>
                         
-                            <a href="/projects/activate-theme/6/" class="theme-option ">
+                            <a href="/projects/activate-theme/4/" class="theme-option ">
                                 <span class="theme-color-preview" style="background: #1a1215; border: 1px solid #fb7185;"></span>
                                 Soft Rose
                                 
@@ -186,6 +186,18 @@
 
             <div class="social-nav">
                 
+                    <a href="https://github.com/serhatcamm" target="_blank" title="GitHub">
+                        
+                            <i class="fa-brands fa-github"></i>
+                        
+                    </a>
+                
+                    <a href="https://www.linkedin.com/in/serhatcammm/" target="_blank" title="LinkedIn">
+                        
+                            <i class="fa-brands fa-linkedin"></i>
+                        
+                    </a>
+                
             </div>
         </div>
     </nav>
@@ -202,7 +214,7 @@
         
         <div class="glass-card testimonial-card">
             <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"Serhat is an exceptional engineer with a deep understanding of Django."</p>
+            <p class="testimonial-text">"Serhat is an exceptional engineer with a deep understanding of Django. He delivered our APIs ahead of schedule."</p>
             <div class="testimonial-author">
                 
                 <img src="https://i.pravatar.cc/150?u=1" alt="John Doe" class="author-img">
@@ -215,7 +227,7 @@
         
         <div class="glass-card testimonial-card">
             <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"The attention to detail in the dynamic theme engine is impressive."</p>
+            <p class="testimonial-text">"The attention to detail in the dynamic theme engine is impressive. Our clients love the polished look."</p>
             <div class="testimonial-author">
                 
                 <img src="https://i.pravatar.cc/150?u=2" alt="Jane Smith" class="author-img">
@@ -228,7 +240,7 @@
         
         <div class="glass-card testimonial-card">
             <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"Reliable, fast, and writes very clean code. Highly recommended."</p>
+            <p class="testimonial-text">"Reliable, fast, and writes very clean code. Highly recommended for any backend-heavy project."</p>
             <div class="testimonial-author">
                 
                 <img src="https://i.pravatar.cc/150?u=3" alt="Mike Ross" class="author-img">
@@ -241,91 +253,39 @@
         
         <div class="glass-card testimonial-card">
             <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"Delivered our MVP ahead of schedule with perfect performance."</p>
+            <p class="testimonial-text">"A rare mix of solid engineering and great communication. Serhat owns every task he takes on."</p>
             <div class="testimonial-author">
                 
-                <img src="https://i.pravatar.cc/150?u=4" alt="Sarah Lee" class="author-img">
+                <img src="https://i.pravatar.cc/150?u=4" alt="Emily Chen" class="author-img">
                 
-                <div class="author-info">                    <h4>Sarah Lee</h4>
-                    <p>CEO, StartUp Inc</p>
+                <div class="author-info">                    <h4>Emily Chen</h4>
+                    <p>CTO, DataForge Labs</p>
                 </div>
             </div>
         </div>
         
         <div class="glass-card testimonial-card">
             <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"Great collaborator who understands the full stack deeply."</p>
+            <p class="testimonial-text">"Superb execution from design to deployment. The final product exceeded what we asked for."</p>
             <div class="testimonial-author">
                 
-                <img src="https://i.pravatar.cc/150?u=5" alt="Chris Evans" class="author-img">
+                <img src="https://i.pravatar.cc/150?u=5" alt="Ahmed Al-Farsi" class="author-img">
                 
-                <div class="author-info">                    <h4>Chris Evans</h4>
-                    <p>Frontend Lead, DesignFlow</p>
+                <div class="author-info">                    <h4>Ahmed Al-Farsi</h4>
+                    <p>Startup Founder, NovaTech</p>
                 </div>
             </div>
         </div>
         
         <div class="glass-card testimonial-card">
             <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"Security-first mindset. The SSL implementation was flawless."</p>
+            <p class="testimonial-text">"Working with Serhat is seamless — he cares about the details and ships on time, every time."</p>
             <div class="testimonial-author">
                 
-                <img src="https://i.pravatar.cc/150?u=6" alt="Elena Gilbert" class="author-img">
+                <img src="https://i.pravatar.cc/150?u=6" alt="Sofia Rossi" class="author-img">
                 
-                <div class="author-info">                    <h4>Elena Gilbert</h4>
-                    <p>DevOps Engineer, SafeNet</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="glass-card testimonial-card">
-            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"Efficiency and elegance. A master of Python automation."</p>
-            <div class="testimonial-author">
-                
-                <img src="https://i.pravatar.cc/150?u=7" alt="Bruce Wayne" class="author-img">
-                
-                <div class="author-info">                    <h4>Bruce Wayne</h4>
-                    <p>Director, Wayne Ent</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="glass-card testimonial-card">
-            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"Exceptional communication and technical execution."</p>
-            <div class="testimonial-author">
-                
-                <img src="https://i.pravatar.cc/150?u=8" alt="Diana Prince" class="author-img">
-                
-                <div class="author-info">                    <h4>Diana Prince</h4>
-                    <p>Project Lead, Themyscira</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="glass-card testimonial-card">
-            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"His backend architecture is built for scale. Solid work."</p>
-            <div class="testimonial-author">
-                
-                <img src="https://i.pravatar.cc/150?u=9" alt="Tony Stark" class="author-img">
-                
-                <div class="author-info">                    <h4>Tony Stark</h4>
-                    <p>CTO, Stark Ind</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="glass-card testimonial-card">
-            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-            <p class="testimonial-text">"Always stays updated with the latest Django features."</p>
-            <div class="testimonial-author">
-                
-                <img src="https://i.pravatar.cc/150?u=10" alt="Peter Parker" class="author-img">
-                
-                <div class="author-info">                    <h4>Peter Parker</h4>
-                    <p>Developer, Daily Bugle</p>
+                <div class="author-info">                    <h4>Sofia Rossi</h4>
+                    <p>Design Lead, PixelWorks</p>
                 </div>
             </div>
         </div>
