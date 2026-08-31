@@ -16,6 +16,10 @@ Fully containerized with **Docker** so you can run it (demo content included) in
   <img src="assets/screenshots/themes/soft-rose.png" width="49%" alt="Soft Rose theme" />
 </p>
 
+<p align="center">
+  <img src="assets/screenshots/themes/portfolio-demo.gif" alt="Portfolio demo scrolling through all themes" />
+</p>
+
 ## ✨ Features
 
 - **Dynamic Theme Management** — switch between built-in color schemes (Modern Dark, Midnight Deep, Emerald Forest, Soft Rose) or create your own from the admin.
@@ -188,36 +192,6 @@ The `docs/` folder is the static export served by GitHub Pages at:
 - Static files are served by **WhiteNoise**; user-uploaded media is served by Django for this self-contained deployment. For high-traffic public hosting, front it with Nginx/Caddy.
 - Change the default admin password (`admin123`) before any public deployment.
 - Enable `ENVIRONMENT=production` (plus HTTPS/TLS) to turn on `SECURE_SSL_REDIRECT`, HSTS, and secure cookies.
-
----
-
-## 📸 More screenshots
-
-### Home
-
-![Home](assets/screenshots/home.png)
-
-### Projects
-
-![Projects grid](assets/screenshots/projects-wide.png)
-![Projects](assets/screenshots/projects.png)
-
-### References
-
-![References](assets/screenshots/references-wide.png)
-![References](assets/screenshots/references.png)
-
-### Admin Panel
-
-![Admin homepage](assets/screenshots/admin-panel-homepage.png)
-![Admin](assets/screenshots/admin.png)
-
-### About & Contact
-
-![About](assets/screenshots/about.png)
-![Contact](assets/screenshots/contact.png)
-
-![Portfolio demo](assets/screenshots/portfolio-demo.gif)
 
 ---
 
