@@ -16,10 +16,6 @@ Fully containerized with **Docker** so you can run it (demo content included) in
   <img src="assets/screenshots/themes/soft-rose.png" width="49%" alt="Soft Rose theme" />
 </p>
 
-<p align="center">
-  <img src="assets/screenshots/themes/portfolio-demo.gif" alt="Portfolio demo scrolling through all themes" />
-</p>
-
 ## ✨ Features
 
 - **Dynamic Theme Management** — switch between built-in color schemes (Modern Dark, Midnight Deep, Emerald Forest, Soft Rose) or create your own from the admin.
